@@ -40,7 +40,7 @@ export function HeroSection() {
       } catch (error) {
         console.warn("Error enviando datos de tracking:", error)
       }
-      const whatsappUrl = "https://wa.me/5493416633244?text=Buenas,%20Me%20gustaria%20crear%20un%20usuario%20en%20Alpaca"
+      const whatsappUrl = "https://w.app/vuxpcl"
       window.fbq("track", "StartTrial", {
         content_name: "Botón CTA",
         value: 10,
@@ -49,7 +49,7 @@ export function HeroSection() {
       window.location.href = whatsappUrl
     } catch (error) {
       console.error("Error en el proceso:", error)
-      const whatsappUrl = "https://wa.me/5493416633244?text=Buenas,%20Me%20gustaria%20crear%20un%20usuario%20en%20Alpaca"
+      const whatsappUrl = "https://w.app/vuxpcl"
       window.location.href = whatsappUrl
     } finally {
       setLoadingStates((prevStates) => ({ ...prevStates, whatsapp: false }))
@@ -89,7 +89,7 @@ export function HeroSection() {
   }
 
   return (
-    <section className="min-h-screen bg-[#15202C] relative overflow-hidden">
+    <section className="min-h-screen bg-[#1E1E1E] relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -152,7 +152,7 @@ export function HeroSection() {
                   </div>
                   <motion.div className="max-w-4xl mx-auto">
                     <motion.p
-                      className={`text-[#F01A4A] font-bold mb-2 md:mb-4 ${isMobile ? "text-lg" : "text-2xl md:text-xl"}`}
+                      className={`text-[white] font-bold mb-2 md:mb-4 ${isMobile ? "text-lg" : "text-2xl md:text-xl"}`}
                     >
                       Tu lugar de confianza
                     </motion.p>
@@ -162,24 +162,24 @@ export function HeroSection() {
                       <motion.div
                         className={`bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl ${isMobile ? "p-3" : "p-6"}`}
                       >
-                        <Clock className={`text-[#23D366] mx-auto mb-2 md:mb-3 ${isMobile ? "w-6 h-6" : "w-8 h-8"}`} />
+                        <Clock className={`text-[#063D7E] mx-auto mb-2 md:mb-3 ${isMobile ? "w-6 h-6" : "w-8 h-8"}`} />
                         <p className={`text-white font-semibold ${isMobile ? "text-sm" : "text-xl"}`}>Atención 24hs. Todos los dias</p>
                       </motion.div>
                       {/* Botón CTA centrado en la versión de escritorio */}
                       {!isMobile && (
                         <motion.button
-                          id="cta-button" // Agregamos un id para el botón  
+                          id="cta-button" // Agregamos un id para el botón
                           onClick={handleWhatsAppClick}
                           disabled={loadingStates["register"]}
-                          className="group relative bg-gradient-to-r from-green-500 to-yellow-500 hover:from-green-400 hover:to-yellow-400 disabled:from-green-600 disabled:to-yellow-600 text-black font-black py-3 px-6 text-lg rounded-xl shadow-2xl overflow-hidden min-w-[200px] min-h-[50px] flex items-center justify-center gap-2"
+                          className="group relative bg-gradient-to-r from-[#DB4168] to-[#063D7E] hover:from-[#C13A5F] hover:to-[#FF8AA5] disabled:from-[#B13555] disabled:to-[#E8688F] text-white font-black py-3 px-6 text-lg rounded-xl shadow-2xl overflow-hidden min-w-[200px] min-h-[50px] flex items-center justify-center gap-2"
                           whileHover={{
                             scale: 1.05,
-                            boxShadow: "0 25px 50px -12px rgba(234, 179, 8, 0.5)",
+                            boxShadow: "0 25px 50px -12px rgba(219, 65, 104, 0.5)",
                           }}
                           whileTap={{ scale: 0.98 }}
                         >
                           <motion.div
-                            className="absolute inset-0 bg-gradient-to-r from-green-400 to-yellow-400"
+                            className="absolute inset-0 bg-gradient-to-r from-[#C13A5F] to-[#FF8AA5]"
                             initial={{ x: "-100%" }}
                             whileHover={{ x: "0%" }}
                             transition={{ duration: 0.3 }}
@@ -251,7 +251,7 @@ export function HeroSection() {
                       <motion.button
                         onClick={handleWhatsAppClick}
                         disabled={loadingStates["register"]}
-                        className="group relative bg-gradient-to-r from-green-500 to-yellow-500 hover:from-green-400 hover:to-yellow-400 disabled:from-green-600 disabled:to-yellow-600 text-black font-black py-3 px-6 text-lg rounded-xl shadow-2xl overflow-hidden min-w-[200px] min-h-[50px] flex items-center justify-center gap-2"
+                        className="group relative bg-gradient-to-r from-[#DB4168] to-[#063D7E] hover:from-[#C13A5F] hover:to-[#FF8AA5] disabled:from-[#B13555] disabled:to-[#E8688F] text-white font-black py-3 px-6 text-lg rounded-xl shadow-2xl overflow-hidden min-w-[200px] min-h-[50px] flex items-center justify-center gap-2"
                         whileHover={{
                           scale: 1.05,
                           boxShadow: "0 25px 50px -12px rgba(234, 179, 8, 0.5)",
@@ -259,7 +259,7 @@ export function HeroSection() {
                         whileTap={{ scale: 0.98 }}
                       >
                         <motion.div
-                          className="absolute inset-0 bg-gradient-to-r from-green-400 to-yellow-400"
+                          className="absolute inset-0 bg-gradient-to-r from-[#C13A5F] to-[#063D7E]"
                           initial={{ x: "-100%" }}
                           whileHover={{ x: "0%" }}
                           transition={{ duration: 0.3 }}
@@ -407,10 +407,10 @@ export function HeroSection() {
                             </motion.button>
                           </div>
                           <motion.button
-                            id="cta-button" // Agregamos un id para el botón  
+                            id="cta-button" // Agregamos un id para el botón
                             onClick={handleWhatsAppClick}
                             disabled={loadingStates["register"]}
-                            className="group relative bg-gradient-to-r from-green-500 to-yellow-500 hover:from-green-400 hover:to-yellow-400 disabled:from-green-600 disabled:to-yellow-600 text-black font-black py-6 px-12 text-2xl lg:text-3xl rounded-2xl shadow-2xl overflow-hidden min-w-[280px] lg:min-w-[400px] min-h-[80px] lg:min-h-[100px] flex items-center justify-center gap-4"
+                            className="group relative bg-gradient-to-r from-[#DB4168] to-[#063D7E] hover:from-[#C13A5F] hover:to-[#FF8AA5] disabled:from-[#B13555] disabled:to-[#E8688F] text-white font-black py-6 px-12 text-2xl lg:text-3xl rounded-2xl shadow-2xl overflow-hidden min-w-[280px] lg:min-w-[400px] min-h-[80px] lg:min-h-[100px] flex items-center justify-center gap-4"
                             whileHover={{
                               scale: 1.05,
                               boxShadow: "0 25px 50px -12px rgba(234, 179, 8, 0.5)",
@@ -418,7 +418,7 @@ export function HeroSection() {
                             whileTap={{ scale: 0.98 }}
                           >
                             <motion.div
-                              className="absolute inset-0 bg-gradient-to-r from-green-400 to-yellow-400"
+                              className="absolute inset-0 bg-gradient-to-r from-[#C13A5F] to-[#FF8AA5]"
                               initial={{ x: "-100%" }}
                               whileHover={{ x: "0%" }}
                               transition={{ duration: 0.3 }}
@@ -450,7 +450,7 @@ export function HeroSection() {
                               animate={{ rotate: [0, 5, -5, 0] }}
                               transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, repeatDelay: 3 }}
                             >
-                              🇦🇷
+                              🇦🇷 Argentina
                             </motion.div>
                             <MapPin className="w-5 h-5 text-blue-400" />
                            {/*  {loadingLocalidad ? (

@@ -13,29 +13,16 @@ export function Footer() {
             <span className="font-medium">+18 años</span>
           </div>
 
-          {/* Links */}
-          <div className="flex items-center gap-6">
-            <button className="flex items-center gap-1 hover:text-white/80 transition-colors">
-              <FileText className="w-3 h-3" />
-              <span>Términos</span>
-            </button>
-            <button className="flex items-center gap-1 hover:text-white/80 transition-colors">
-              <Lock className="w-3 h-3" />
-              <span>Privacidad</span>
-            </button>
-          </div>
+         
 
           {/* Copyright */}
           <div className="flex items-center gap-1">
             <Copyright className="w-3 h-3" />
-            <span>2025 Bet30.com</span>
+            <span>2025 Bet30.blog</span>
           </div>
         </div>
 
-        {/* Responsible Gaming Notice */}
-        <div className="mt-4 pt-4 border-t border-white/5 text-center">
-          <p className="text-xs text-white/40">Juega responsablemente.</p>
-        </div>
+       
       </div>
     </footer>
   )
