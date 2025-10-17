@@ -15,12 +15,12 @@ const chango = Tektur({ subsets: ["latin"], weight: "400", display: "swap", vari
 
 
 const siteConfig = {
-  name: "Alpacabet",
-  title: "Alpacabet",
-  description: "Alpacabet: apuestas deportivas, casino, en vivo y más. ¡Regístrate y gana!",
-  url: "https://alpacabet.co",
-  ogImage: "https://whitewallets.s3.amazonaws.com/alpacabet/commons/logo-solo-removebg-prevssssssssssssssssssiew1703686331.png",
-  favicon: "https://whitewallets.s3.amazonaws.com/alpacabet/commons/logo-solo-removebg-prevssssssssssssssssssiew1703686331.png",
+  name: "Bet30",
+  title: "Bet30",
+  description: "Bet30: apuestas deportivas, casino, en vivo y más. ¡Regístrate y gana!",
+  url: "https://casino-bet30-argentina.com/es-ar/",
+  ogImage: "https://casino-bet30-argentina.com/wp-content/uploads/sites/11/2024/09/favicon_30_30338eb618_11zon.webp",
+  favicon: "https://casino-bet30-argentina.com/wp-content/uploads/sites/11/2024/09/favicon_30_30338eb618_11zon.webp",
 };
 
 export const metadata: Metadata = {
