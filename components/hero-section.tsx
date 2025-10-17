@@ -164,7 +164,7 @@ export function HeroSection() {
                         className={`bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl ${isMobile ? "p-3" : "p-6"}`}
                       >
                         <Clock className={`text-[#063D7E] mx-auto mb-2 md:mb-3 ${isMobile ? "w-6 h-6" : "w-8 h-8"}`} />
-                        <p className={`text-white font-semibold ${isMobile ? "text-sm" : "text-xl"}`}>Atención 24hs. Soporte 24hs</p>
+                        <p className={`text-white font-semibold ${isMobile ? "text-sm" : "text-xl"}`}>Atención 24hs. Soporte 24hs. Retiros 24hs.</p>
                       </motion.div>
                       {/* Botón CTA centrado en la versión de escritorio */}
                       {!isMobile && (
