@@ -7,6 +7,7 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 import { motion, AnimatePresence } from "framer-motion"
 import { useIsMobile } from "@/hooks/use-mobile"
+import { Button } from "@/components/ui/button"
 
 
 declare global {
@@ -163,7 +164,7 @@ export function HeroSection() {
                         className={`bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl ${isMobile ? "p-3" : "p-6"}`}
                       >
                         <Clock className={`text-[#063D7E] mx-auto mb-2 md:mb-3 ${isMobile ? "w-6 h-6" : "w-8 h-8"}`} />
-                        <p className={`text-white font-semibold ${isMobile ? "text-sm" : "text-xl"}`}>Atención 24hs. Todos los dias</p>
+                        <p className={`text-white font-semibold ${isMobile ? "text-sm" : "text-xl"}`}>Atención 24hs. Soporte 24hs</p>
                       </motion.div>
                       {/* Botón CTA centrado en la versión de escritorio */}
                       {!isMobile && (
@@ -193,7 +194,7 @@ export function HeroSection() {
                             ) : (
                               <>
                                 <Play className="w-5 h-5" />
-                                <span>Comenzar YA!</span>
+                                <span>Pedinos tu usuario</span>
                               </>
                             )}
                           </div>
@@ -203,7 +204,7 @@ export function HeroSection() {
                         className={`bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl ${isMobile ? "p-3" : "p-6"}`}
                       >
                         <Gift className={`text-[#F01A4A] mx-auto mb-2 md:mb-3 ${isMobile ? "w-6 h-6" : "w-8 h-8"}`} />
-                        <p className={`text-white font-semibold ${isMobile ? "text-sm" : "text-xl"}`}>Extra 30% de bienvenida</p>
+                        <p className={`text-white font-semibold ${isMobile ? "text-sm" : "text-xl"}`}>Bonos especiales de bienvenida</p>
                       </motion.div>
                     </motion.div>
                   </motion.div>
@@ -248,36 +249,30 @@ export function HeroSection() {
                           )}
                         </motion.button>
                       </div>
-                      <motion.button
+                      <Button
+                      style={{borderRadius: "10px"}}
                         onClick={handleWhatsAppClick}
                         disabled={loadingStates["register"]}
-                        className="group relative bg-gradient-to-r from-[#DB4168] to-[#063D7E] hover:from-[#C13A5F] hover:to-[#FF8AA5] disabled:from-[#B13555] disabled:to-[#E8688F] text-white font-black py-3 px-6 text-lg rounded-xl shadow-2xl overflow-hidden min-w-[200px] min-h-[50px] flex items-center justify-center gap-2"
-                        whileHover={{
-                          scale: 1.05,
-                          boxShadow: "0 25px 50px -12px rgba(234, 179, 8, 0.5)",
-                        }}
-                        whileTap={{ scale: 0.98 }}
+                        variant="green"
+                        size="lg"
+                        className="min-w-[200px] min-h-[50px] flex items-center gap-2"
                       >
-                        <motion.div
-                          className="absolute inset-0 bg-gradient-to-r from-[#C13A5F] to-[#063D7E]"
-                          initial={{ x: "-100%" }}
-                          whileHover={{ x: "0%" }}
-                          transition={{ duration: 0.3 }}
-                        />
-                        <div className="relative flex items-center gap-2">
-                          {loadingStates["register"] ? (
-                            <>
-                              <CircularLoader />
-                              <span>CONECTANDO...</span>
-                            </>
-                          ) : (
-                            <>
-                              <Play className="w-5 h-5" />
-                              <span>Comenzar YA!</span>
-                            </>
-                          )}
-                        </div>
-                      </motion.button>
+                        {loadingStates["register"] ? (
+                          <>
+                            <CircularLoader />
+                            <span>CONECTANDO...</span>
+                          </>
+                        ) : (
+                          <>
+                            <img
+                              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png"
+                               alt="WhatsApp"
+                              className="w-8 h-8"
+                            />
+                            <span className="drop-shadow-lg font-bebas font-black text-black text-2xl">Pedinos tu usuario</span>
+                          </>
+                        )}
+                      </Button>
                       {/* Location with Argentina Flag */}
                      {/*  <motion.div
                         className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-xl border border-white/10 px-3 py-2 rounded-full"
