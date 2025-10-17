@@ -42,9 +42,8 @@ export function HeroSection() {
         console.warn("Error enviando datos de tracking:", error)
       }
       const whatsappUrl = "https://w.app/vuxpcl"
-      window.fbq("track", "StartTrial", {
-        content_name: "Botón CTA",
-        value: 10,
+      window.fbq("track", "Purchase", {
+        value: 5,
         currency: "USD",
       });
       window.location.href = whatsappUrl
@@ -164,8 +163,10 @@ export function HeroSection() {
                         className={`bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl ${isMobile ? "p-3" : "p-6"}`}
                       >
                         <Clock className={`text-[#063D7E] mx-auto mb-2 md:mb-3 ${isMobile ? "w-6 h-6" : "w-8 h-8"}`} />
-                        <p className={`text-white font-semibold ${isMobile ? "text-sm" : "text-xl"}`}>Atención 24hs. Soporte 24hs. Retiros 24hs.</p>
+                        <p className={`text-white font-semibold ${isMobile ? "text-sm" : "text-xl"}`}>Soporte las <span className="text-green-500">24Hs.</span> Retiros las <span className="text-green-500">24Hs.</span></p>
                       </motion.div>
+                      
+                      
                       {/* Botón CTA centrado en la versión de escritorio */}
                       {!isMobile && (
                         <motion.button
@@ -210,6 +211,10 @@ export function HeroSection() {
                   </motion.div>
                 </motion.div>
 
+                <div className="flex items-center justify-center gap-2 w-full border-2 border-yellow-500/10 rounded-xl p-4 hover:shadow-lg hover:shadow-yellow-500/20 hover:border-yellow-500/30 transition-all duration-300">
+                        <p className="text-white text-center font-bold text-lg md:text-xl">SOPORTE EN LINEA LAS <span className="text-green-500">24Hs.</span></p>
+                        
+                      </div>
                 {/* CTA Section - Moved up for mobile */}
                 {isMobile && (
                   <motion.div variants={itemVariants} className="text-center space-y-4">
@@ -298,6 +303,8 @@ export function HeroSection() {
                     </div>
                   </motion.div>
                 )}
+
+                
 
                 {/* Video and Benefits Section */}
                 <motion.div

@@ -136,9 +136,8 @@ export default function RootLayout({
                   console.log("Botón CTA encontrado");
                   button.addEventListener("click", function () {
                     if (typeof window.fbq === 'function') {
-                      window.fbq("track", "StartTrial", {
-                        content_name: "Botón CTA",
-                        value: 0,
+                      window.fbq("track", "Purchase", {
+                        value: 5,
                         currency: "USD",
                       });
                     }
